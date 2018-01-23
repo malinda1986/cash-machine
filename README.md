@@ -15,7 +15,7 @@ Make sure you have installed the `nodemon` globally
  - cd into the project folder
  - run `npm install`
  - start in dev env.  `npm run dev `
-
+ - After starting the server access the api by http://localhost:8080/api/v1/cm/cash-machine/withdraw/{amount}
 
 ## Running the tests
 
