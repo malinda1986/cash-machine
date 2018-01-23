@@ -4,7 +4,7 @@ Cash machine app
 
 ## Getting Started
 
-Clone the project from ``git@bitbucket.org:{USERNAME}/soul-backend.git``
+Clone the project from ``https://github.com/{username}/cash-machine.git``
 ### Prerequisites
 
 Make sure you have installed the `nodemon` globally 
@@ -15,9 +15,7 @@ Make sure you have installed the `nodemon` globally
  - cd into the project folder
  - run `npm install`
  - start in dev env.  `npm run dev `
- - start in prod env. `npm run prod`
 
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -25,6 +23,8 @@ End with an example of getting some data out of the system or using it for a lit
  - Eslint `npm run eslint`
  - Test coverage `npm run cover`
 
+### API Documentation
+ - After running the server  `npm run dev ` you can access the doc - [http://localhost:8080/apidoc/]
 
 ### And coding style 
 
@@ -32,22 +32,16 @@ End with an example of getting some data out of the system or using it for a lit
 
 ```
 <type>(<scope>): <subject>
-Ex: feat(SEVA-234): Adding new test cases for login
+Ex: feat(001): Setup project
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-## Versioning
 
 ## Authors
+* **Malinda R** 
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
 
 

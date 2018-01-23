@@ -54,12 +54,6 @@ const Server = {
         });
     },
 
-    logDBMessages(conn){
-        console.log(
-            chalk.green(' Mongo db is running...')
-        );
-    },
-
     logStartMessages() {
         if (process.env.NODE_ENV === 'production') {
             console.log(
