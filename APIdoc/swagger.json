@@ -1,0 +1,92 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Cash Machine API Document",
+    "version": "1.0.0",
+    "title": "Cash Machine API Documentation",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "basePath": "/api/v1/cm",
+  "tags": [
+    {
+      "name": "cash-machine",
+      "description": "Operations about Cash Machine",
+      "externalDocs": {
+        "description": "Find out more about our store",
+        "url": "http://swagger.io"
+      }
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/cash-machine/withdraw/{amount}": {
+      "get": {
+        "tags": [
+          "withdraw"
+        ],
+        "summary": "delivery of notes when a client does a withdraw in a cash machine",
+        "description": "delivery of notes when a client does a withdraw in a cash machine",
+        "operationId": "withdraw",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "amount",
+            "required": true,
+            "type": "string",
+            "description": "Amount to withdraw"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "If notes are available send the array of notes of notes not available send the NoteUnavailable error message with same status code",
+            "schema": {
+              "$ref": "#/definitions/CM"
+            }
+          },
+          "400": {
+            "description": "InvalidArgument"
+          }
+
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "petstore_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "http://petstore.swagger.io/oauth/dialog",
+      "flow": "implicit",
+      "scopes": {
+        "write:pets": "modify pets in your account",
+        "read:pets": "read your pets"
+      }
+    }
+  },
+  "definitions": {
+    "CM": {
+      "type": "object",
+      "properties": {
+        "Notes": {
+          "type": "array",
+          "format": "int64"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}

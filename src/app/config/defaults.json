@@ -1,0 +1,14 @@
+{
+    "hostname": "cash.machine",
+    "api": {
+        "version" : 1,
+        "app_path": "/api/v1/cm"
+    },
+    "ip": "localhost",
+    "port": "8080",
+    "loggly": {
+        "token": "",
+        "subdomain": ""
+    },
+    "log_level": "error"
+}
